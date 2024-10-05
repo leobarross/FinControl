@@ -1,9 +1,16 @@
+using FinControl.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<FinControlDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("StringConexao")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

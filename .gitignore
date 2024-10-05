@@ -10,6 +10,13 @@
 *.userosscache
 *.sln.docstates
 
+# Ignorar o arquivo de configurações do aplicativo
+appsettings.json
+
+# Ignorar o diretório de build
+bin/
+obj/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
